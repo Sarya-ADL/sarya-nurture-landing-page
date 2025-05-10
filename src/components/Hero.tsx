@@ -48,10 +48,7 @@ const Hero = () => {
           
           <div className="space-y-3 mt-4">
             <p className="text-lg text-gray-600">
-              A specialized app for parents of children with special needs, designed specifically for Indian families.
-            </p>
-            <p className="text-lg text-sarya-purple font-medium">
-              We support Hindi, Tamil, Telugu, Bengali, Malayalam and more regional languages!
+              A specially designed app for parents of children with autism, ADHD, Down syndrome, and special needs, tailored for Indian families.
             </p>
           </div>
           
@@ -73,8 +70,8 @@ const Hero = () => {
         <div className="flex justify-center">
           <div className="relative w-full max-w-md">
             <img 
-              src="/lovable-uploads/6e05ac42-50f6-4207-bdbf-d24a9f668f00.png" 
-              alt="Sarya App - Girl with special needs" 
+              src="/lovable-uploads/55a9c973-3128-46eb-8f6c-8ab5f7adcd87.png" 
+              alt="Sarya App - Daily activities for children with special needs" 
               className="rounded-3xl shadow-lg w-full object-cover animate-float"
             />
             <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-sm p-3 rounded-xl">

@@ -5,28 +5,23 @@ const Languages = () => {
   const languages = [
     {
       name: "Hindi",
-      native: "हिन्दी",
-      percentage: 85
+      native: "हिन्दी"
     },
     {
       name: "Tamil",
-      native: "தமிழ்",
-      percentage: 75
+      native: "தமிழ்"
     },
     {
       name: "Telugu",
-      native: "తెలుగు",
-      percentage: 80
+      native: "తెలుగు"
     },
     {
       name: "Bengali",
-      native: "বাংলা",
-      percentage: 70
+      native: "বাংলা"
     },
     {
       name: "Malayalam",
-      native: "മലയാളം",
-      percentage: 65
+      native: "മലയാളം"
     }
   ];
 
@@ -47,11 +42,10 @@ const Languages = () => {
               <p className="text-2xl font-devanagari mb-4">{language.native}</p>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
                 <div 
-                  className="bg-sarya-purple h-2.5 rounded-full" 
-                  style={{ width: `${language.percentage}%` }}
+                  className="bg-sarya-purple h-2.5 rounded-full w-full"
                 ></div>
               </div>
-              <p className="mt-2 text-sm text-gray-600">{language.percentage}% Complete</p>
+              <p className="mt-2 text-sm text-gray-600">Fully Supported</p>
             </div>
           ))}
         </div>
