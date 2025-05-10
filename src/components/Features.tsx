@@ -1,34 +1,34 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { child, book, calendar, heart, bookUser } from 'lucide-react';
+import { BabyIcon, Book, Calendar, Heart, BookUser } from 'lucide-react';
 
 const Features = () => {
   const features = [
     {
       title: "Daily Self-Care Routines",
       description: "Age-appropriate routines for hygiene, nutrition, and self-care tasks designed specifically for children with special needs.",
-      icon: child
+      icon: BabyIcon
     },
     {
       title: "Age-Based Learning",
       description: "Customized developmental activities tailored to your child's specific needs, abilities, and interests.",
-      icon: book
+      icon: Book
     },
     {
       title: "Structured Schedules",
       description: "Create visual schedules and reminders that help establish consistency and reduce anxiety for your child.",
-      icon: calendar
+      icon: Calendar
     },
     {
       title: "Multi-Language Support",
       description: "Content available in Hindi, Tamil, Telugu, Bengali, and Malayalam to support families across India.",
-      icon: bookUser
+      icon: BookUser
     },
     {
       title: "Parent Community",
       description: "Connect with other parents, share experiences, and learn from each other in a supportive environment.",
-      icon: heart
+      icon: Heart
     }
   ];
 
