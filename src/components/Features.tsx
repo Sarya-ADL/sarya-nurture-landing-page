@@ -57,6 +57,36 @@ const Features = () => {
             </Card>
           ))}
         </div>
+
+        <div className="mt-20 bg-sarya-purple/10 p-8 rounded-3xl">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-sarya-purple-dark">AI-Powered Personal Assistant</h3>
+            <p className="text-lg text-gray-700 mt-2">
+              We're integrating AI and machine learning to create a personalized buddy for your child
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h4 className="font-bold text-sarya-purple-dark mb-2">Personalized Activities</h4>
+              <p className="text-gray-600">
+                Our AI suggests activities specifically tailored to your child's developmental needs, interests, and abilities
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h4 className="font-bold text-sarya-purple-dark mb-2">Progress Tracking</h4>
+              <p className="text-gray-600">
+                Machine learning algorithms track your child's progress and adjust recommendations for optimal development
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h4 className="font-bold text-sarya-purple-dark mb-2">Cultural Adaptation</h4>
+              <p className="text-gray-600">
+                Our AI understands Indian culture and adapts content to reflect familiar environments and situations
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
