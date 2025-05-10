@@ -1,8 +1,26 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
+  
+  const taglines = [
+    { text: "Nurturing every child with care.", language: "English" },
+    { text: "हर बच्चे की देखभाल, प्यार से।", language: "Hindi" },
+    { text: "ప్రతి పిల్లకు ప్రేమతో నురేపు.", language: "Telugu" },
+    { text: "ஒவ்வொரு குழந்தைக்கும் அன்பும் பராமரிப்பும்.", language: "Tamil" },
+    { text: "ভালবাসা ও যত্নে প্রতিটি শিশু।", language: "Bengali" },
+    { text: "ഒരൊരോ കുഞ്ഞിനും സ്‌നേഹപരിചരണം.", language: "Malayalam" },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTaglineIndex((prevIndex) => (prevIndex + 1) % taglines.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-16 md:py-24">
       <div className="container-custom grid md:grid-cols-2 gap-8 items-center">
@@ -11,37 +29,29 @@ const Hero = () => {
             Sarya <span className="font-devanagari">(सार्या)</span>
           </h1>
           
-          <div className="relative h-52 perspective-1000">
-            <p className="text-xl md:text-2xl font-medium absolute transform-style-3d animate-float">
-              Nurturing every child with care.
-            </p>
-            <p className="font-devanagari text-lg text-sarya-purple-dark absolute transform-style-3d translate-z-8 translate-y-8 animate-float-delay-1">
-              हर बच्चे की देखभाल, प्यार से।
-            </p>
-            <p className="text-lg text-sarya-purple-dark absolute transform-style-3d translate-z-16 translate-y-16 animate-float-delay-2">
-              ప్రతి పిల్లకు ప్రేమతో నురేపు.
-            </p>
-            <p className="text-lg text-sarya-purple-dark absolute transform-style-3d translate-z-24 translate-y-24 animate-float-delay-3">
-              ஒவ்வொரு குழந்தைக்கும் அன்பும் பராமரிப்பும்.
-            </p>
-            <p className="text-lg text-sarya-purple-dark absolute transform-style-3d translate-z-32 translate-y-32 animate-float-delay-4">
-              ভালবাসা ও যত্নে প্রতিটি শিশু।
-            </p>
-            <p className="text-lg text-sarya-purple-dark absolute transform-style-3d translate-z-40 translate-y-40 animate-float-delay-5">
-              ഒരൊരോ കുഞ്ഞിനും സ്‌നേഹപരിചരണം.
-            </p>
+          <div className="h-24 relative">
+            <div 
+              className="absolute w-full transition-all duration-700 ease-in-out"
+              style={{ 
+                opacity: 1,
+                transform: 'translateY(0)'
+              }}
+            >
+              <p className="text-xl md:text-2xl font-medium text-sarya-purple-dark">
+                {taglines[currentTaglineIndex].text}
+              </p>
+              <span className="text-sm text-sarya-purple opacity-75">
+                {taglines[currentTaglineIndex].language}
+              </span>
+            </div>
           </div>
           
-          <div className="space-y-3 mt-16">
+          <div className="space-y-3 mt-4">
             <p className="text-lg text-gray-600">
-              A specially designed app for parents of children with autism, ADHD, Down syndrome, and special needs, 
-              tailored for Indian families and their unique cultural context.
-            </p>
-            <p className="text-lg text-sarya-purple-dark">
-              <span className="font-semibold">Full language support:</span> Hindi, Tamil, Telugu, Bengali, Malayalam and more!
+              A specialized app for parents of children with special needs, designed specifically for Indian families.
             </p>
             <p className="text-lg text-sarya-purple font-medium">
-              We're creating an AI-powered buddy for your child that suggests personalized activities based on their unique needs and development.
+              We support Hindi, Tamil, Telugu, Bengali, Malayalam and more regional languages!
             </p>
           </div>
           
@@ -61,27 +71,17 @@ const Hero = () => {
         </div>
         
         <div className="flex justify-center">
-          <div className="grid grid-cols-2 gap-6 animate-float">
+          <div className="relative w-full max-w-md">
             <img 
-              src="/lovable-uploads/73317d88-3ce9-454d-841b-41a83c945cf6.png" 
-              alt="Child learning with alphabet card" 
-              className="rounded-3xl shadow-lg w-full object-cover"
+              src="/lovable-uploads/6e05ac42-50f6-4207-bdbf-d24a9f668f00.png" 
+              alt="Sarya App - Girl with special needs" 
+              className="rounded-3xl shadow-lg w-full object-cover animate-float"
             />
-            <img 
-              src="/lovable-uploads/5b5cc5c7-5c4f-42a3-a273-426cc7c35604.png" 
-              alt="Happy child" 
-              className="rounded-3xl shadow-lg w-full object-cover"
-            />
-            <img 
-              src="/lovable-uploads/b8706160-a3aa-4ac1-8dae-449f2d6e6a4f.png" 
-              alt="Child with hygiene tools" 
-              className="rounded-3xl shadow-lg w-full object-cover transform translate-y-6"
-            />
-            <img 
-              src="/lovable-uploads/e39c5970-b0ea-4a93-9801-7e9394465bb5.png" 
-              alt="Parent helping child brush teeth" 
-              className="rounded-3xl shadow-lg w-full object-cover transform translate-y-6"
-            />
+            <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-sm p-3 rounded-xl">
+              <p className="text-sm text-sarya-purple-dark">
+                Our AI-powered buddy suggests personalized activities for your child's unique needs.
+              </p>
+            </div>
           </div>
         </div>
       </div>
