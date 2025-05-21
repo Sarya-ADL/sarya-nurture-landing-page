@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Language } from 'lucide-react';
+import { Languages as LanguagesIcon } from 'lucide-react';
 
 const Languages = () => {
   const languages = [
@@ -51,7 +51,7 @@ const Languages = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <div className="inline-block mb-4 p-2 bg-sarya-purple/20 rounded-full">
-            <Language className="h-8 w-8 text-sarya-purple-dark" />
+            <LanguagesIcon className="h-8 w-8 text-sarya-purple-dark" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-sarya-purple-dark mb-4">Made for Indian Families</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
