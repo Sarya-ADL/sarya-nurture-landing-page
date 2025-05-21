@@ -6,14 +6,14 @@ const Hero = () => {
   const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
   
   const taglines = [
-    { text: "Nurturing every child with care.", language: "English" },
-    { text: "हर बच्चे की देखभाल, प्यार से।", language: "Hindi" },
-    { text: "ప్రతి పిల్లకు ప్రేమతో నురేపు.", language: "Telugu" },
-    { text: "ಪ್ರತಿ ಮಗುವನ್ನು ಪ್ರೀತಿಯಿಂದ ಬೆಳೆಸುವುದು.", language: "Kannada" },
-    { text: "ஒவ்வொரு குழந்தைக்கும் அன்பும் பராமரிப்பும்.", language: "Tamil" },
-    { text: "ભાલબાસા અને સંભાળ સાથે દરેક બાળક.", language: "Gujarati" },
-    { text: "ভালবাসা ও যত্নে প্রতিটি শিশু।", language: "Bengali" },
-    { text: "ഒരൊരോ കുഞ്ഞിനും സ്‌നേഹപരിചരണം.", language: "Malayalam" },
+    { text: "Nurturing every Indian child with care.", language: "English" },
+    { text: "हर भारतीय बच्चे की देखभाल, प्यार से।", language: "Hindi" },
+    { text: "ప్రతి భారతీయ పిల్లకు ప్రేమతో నురేపు.", language: "Telugu" },
+    { text: "ಪ್ರತಿ ಭಾರತೀಯ ಮಗುವನ್ನು ಪ್ರೀತಿಯಿಂದ ಬೆಳೆಸುವುದು.", language: "Kannada" },
+    { text: "ஒவ்வொரு இந்திய குழந்தைக்கும் அன்பும் பராமரிப்பும்.", language: "Tamil" },
+    { text: "દરેક ભારતીય બાળક માટે લાગણી અને સંભાળ.", language: "Gujarati" },
+    { text: "প্রতিটি ভারতীয় শিশুর জন্য স্নেহ ও যত্ন।", language: "Bengali" },
+    { text: "എല്ലാ ഇന്ത്യൻ കുട്ടികൾക്കും സ്നേഹവും പരിചരണവും.", language: "Malayalam" },
   ];
 
   useEffect(() => {
@@ -24,21 +24,26 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-sarya-purple/5 to-sarya-peach/10">
       <div className="container-custom grid md:grid-cols-2 gap-8 items-center">
         <div className="flex flex-col gap-6">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 animate-fade-in">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-sarya-purple/30 to-sarya-peach/30 rounded-full animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-sarya-purple/40 to-sarya-peach/40 rounded-full animate-pulse"></div>
               <img 
                 src="/lovable-uploads/f9e05724-c3d3-444d-97f4-19eac5386a86.png" 
                 alt="Sarya Logo" 
                 className="h-16 md:h-20 relative z-10 drop-shadow-lg"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sarya-purple-dark">
-              Sarya <span className="font-devanagari">(सार्या)</span>
-            </h1>
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sarya-purple-dark">
+                Sarya <span className="font-devanagari">(सार्या)</span>
+              </h1>
+              <div className="inline-block bg-sarya-purple/20 px-3 py-1 rounded-full text-sm text-sarya-purple-dark mt-2">
+                India's First Special Needs ADL App
+              </div>
+            </div>
           </div>
           
           <div className="h-24 relative">
@@ -60,7 +65,7 @@ const Hero = () => {
           
           <div className="space-y-3 mt-4">
             <p className="text-lg text-gray-600">
-              A specially designed app for Indian children with autism, ADHD, Down syndrome, and special needs to develop essential daily life skills and routines.
+              A specially designed app for Indian children with autism, ADHD, Down syndrome, and special needs to develop essential daily life skills and routines through culturally relevant content.
             </p>
           </div>
           
@@ -75,12 +80,15 @@ const Hero = () => {
             </Button>
           </div>
           <div className="mt-2">
-            <p className="text-sarya-purple-dark font-semibold">Starting at ₹899/month - Save with our yearly plan!</p>
+            <p className="text-sarya-purple-dark font-semibold">Starting at ₹899/month - Get 40% OFF with our yearly plan!</p>
+            <div className="mt-2 inline-block bg-sarya-purple/10 px-4 py-2 rounded-lg">
+              <span className="text-sm text-sarya-purple-dark">Join <b>5,000+</b> Indian families already using Sarya</span>
+            </div>
           </div>
         </div>
         
         <div className="flex justify-center">
-          <div className="relative w-full max-w-md">
+          <div className="relative w-full max-w-md animate-float">
             <div className="relative mx-auto bg-black rounded-[3rem] overflow-hidden border-[14px] border-black w-[270px] h-[540px] shadow-2xl">
               <div className="absolute top-0 w-[40%] h-[30px] bg-black left-[30%] rounded-b-xl z-10"></div>
               <img 
@@ -88,6 +96,12 @@ const Hero = () => {
                 alt="Sarya App - Daily activities for children with special needs" 
                 className="w-full h-full object-cover rounded-[2rem]"
               />
+            </div>
+            <div className="absolute -bottom-10 -right-8 bg-sarya-purple/20 rounded-full px-5 py-3 shadow-md">
+              <p className="text-sarya-purple-dark font-medium text-sm">Made for Indian families</p>
+            </div>
+            <div className="absolute -top-6 -left-4 bg-sarya-peach/30 rounded-full px-5 py-3 shadow-md animate-float-delay-2">
+              <p className="text-sarya-purple-dark font-medium text-sm">8 regional languages</p>
             </div>
           </div>
         </div>

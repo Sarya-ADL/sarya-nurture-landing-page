@@ -9,6 +9,7 @@ import Testimonials from '@/components/Testimonials';
 import WhySarya from '@/components/WhySarya';
 import Pricing from '@/components/Pricing';
 import Footer from '@/components/Footer';
+import FAQ from '@/components/FAQ';
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
         <Languages />
         <WhySarya />
         <Testimonials />
+        <FAQ />
         <Pricing />
       </main>
       <Footer />
