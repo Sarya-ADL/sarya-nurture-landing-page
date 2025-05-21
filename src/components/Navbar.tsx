@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Mail } from 'lucide-react';
 
 const Navbar = () => {
   return (
@@ -16,7 +17,6 @@ const Navbar = () => {
             />
           </div>
           <span className="text-2xl font-bold text-sarya-purple-dark">Sarya</span>
-          <span className="text-xl font-devanagari text-sarya-purple-dark">(सार्या)</span>
           <span className="hidden sm:inline-block text-xs bg-sarya-purple/20 px-2 py-1 rounded-full text-sarya-purple-dark">Made in India</span>
         </div>
         
@@ -29,6 +29,10 @@ const Navbar = () => {
         </nav>
         
         <div className="flex items-center gap-4">
+          <a href="mailto:support@thesarya.com" className="hidden md:flex items-center gap-2 text-sarya-purple-dark hover:text-sarya-purple">
+            <Mail size={18} />
+            <span>Contact Support</span>
+          </a>
           <Button className="bg-sarya-purple hover:bg-sarya-purple-dark shadow-md hover:shadow-lg transition-all">
             Download Now
           </Button>

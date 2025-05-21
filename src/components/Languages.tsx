@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Languages as LanguagesIcon } from 'lucide-react';
+import { Languages as LanguagesIcon, Smartphone, Laptop, Tablet } from 'lucide-react';
 
 const Languages = () => {
   const languages = [
@@ -74,6 +74,36 @@ const Languages = () => {
               <p className="mt-2 text-sm text-gray-600">Fully Supported</p>
             </div>
           ))}
+        </div>
+        
+        <div className="mb-12 bg-white rounded-3xl p-8 shadow-md border border-sarya-purple/20">
+          <h3 className="text-2xl font-bold text-sarya-purple-dark mb-6 text-center">Works on Multiple Devices with Same ID</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="flex flex-col items-center p-5 bg-sarya-purple/5 rounded-xl hover:bg-sarya-purple/10 transition-all">
+              <div className="p-3 bg-sarya-purple/20 rounded-full mb-4">
+                <Smartphone className="h-8 w-8 text-sarya-purple-dark" />
+              </div>
+              <h4 className="text-xl font-semibold text-sarya-purple-dark mb-2">Smartphones</h4>
+              <p className="text-center text-gray-600">Use Sarya on your phone for on-the-go support and activities</p>
+            </div>
+            <div className="flex flex-col items-center p-5 bg-sarya-purple/5 rounded-xl hover:bg-sarya-purple/10 transition-all">
+              <div className="p-3 bg-sarya-purple/20 rounded-full mb-4">
+                <Tablet className="h-8 w-8 text-sarya-purple-dark" />
+              </div>
+              <h4 className="text-xl font-semibold text-sarya-purple-dark mb-2">Tablets</h4>
+              <p className="text-center text-gray-600">Larger screen for interactive activities and visual supports</p>
+            </div>
+            <div className="flex flex-col items-center p-5 bg-sarya-purple/5 rounded-xl hover:bg-sarya-purple/10 transition-all">
+              <div className="p-3 bg-sarya-purple/20 rounded-full mb-4">
+                <Laptop className="h-8 w-8 text-sarya-purple-dark" />
+              </div>
+              <h4 className="text-xl font-semibold text-sarya-purple-dark mb-2">Computers</h4>
+              <p className="text-center text-gray-600">Access detailed reports and resources on your desktop</p>
+            </div>
+          </div>
+          <p className="mt-6 text-center text-gray-700">
+            Sign in with the same account across all your devices - your child's progress and preferences sync automatically!
+          </p>
         </div>
         
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-md border border-sarya-purple/20">

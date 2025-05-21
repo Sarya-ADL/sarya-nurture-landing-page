@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -14,7 +15,6 @@ const Footer = () => {
                 className="w-10 h-10 object-contain bg-white rounded-full p-1" 
               />
               <span className="text-xl font-bold">Sarya</span>
-              <span className="text-lg font-devanagari">(सार्या)</span>
             </div>
             <p className="text-sm text-white/80">
               Nurturing every child with care across India through culturally sensitive support for families of children with special needs.
@@ -37,7 +37,15 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Community</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
+              <li>
+                <a 
+                  href="mailto:support@thesarya.com" 
+                  className="hover:text-white transition-colors flex items-center gap-1"
+                >
+                  <Mail size={16} />
+                  Contact Support
+                </a>
+              </li>
             </ul>
           </div>
           
