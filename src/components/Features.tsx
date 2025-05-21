@@ -1,34 +1,47 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Backpack, Bath, CalendarDays, Globe2, HeartHandshake } from 'lucide-react';
+import { 
+  Bath, 
+  Spoon, 
+  PersonStanding, 
+  School, 
+  HeartHandshake, 
+  Video,
+  WashingHands
+} from 'lucide-react';
 
 const Features = () => {
-  const features = [
+  const adlFeatures = [
     {
       title: "Daily Self-Care Routines",
       description: "Age-appropriate routines for hygiene, nutrition, and self-care tasks designed specifically for children with special needs.",
       icon: Bath
     },
     {
-      title: "Age-Based Learning",
-      description: "Customized developmental activities tailored to your child's specific needs, abilities, and interests.",
-      icon: Backpack
+      title: "Eating & Drinking Skills",
+      description: "Fun activities to develop skills like using spoons, forks and drinking without spilling.",
+      icon: Spoon
     },
     {
-      title: "Structured Schedules",
-      description: "Create visual schedules and reminders that help establish consistency and reduce anxiety for your child.",
-      icon: CalendarDays
+      title: "Dressing & Grooming",
+      description: "Step-by-step guides to help children learn to dress themselves and maintain personal hygiene.",
+      icon: PersonStanding
     },
     {
-      title: "Multi-Language Support",
-      description: "Content available in Hindi, Tamil, Telugu, Bengali, and Malayalam to support families across India.",
-      icon: Globe2
+      title: "School Readiness",
+      description: "Activities to help children take care of their school bags and follow classroom routines.",
+      icon: School
     },
     {
-      title: "Parent Community",
-      description: "Connect with other parents, share experiences, and learn from each other in a supportive environment.",
+      title: "Social Skills & Safety",
+      description: "Lessons on polite behavior, personal space, emergency handling, and waiting patiently.",
       icon: HeartHandshake
+    },
+    {
+      title: "Interactive Visual Guides",
+      description: "Engaging videos and step-by-step visual instructions for all daily living activities.",
+      icon: Video
     }
   ];
 
@@ -36,14 +49,14 @@ const Features = () => {
     <section id="features" className="py-20 bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-sarya-purple-dark mb-4">Features Designed with Care</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-sarya-purple-dark mb-4">Life Skills for Every Child</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Every feature in Sarya is thoughtfully created to support Indian children with special needs and empower their parents.
+            Sarya helps Indian children with special needs develop essential Activities of Daily Living (ADL) through engaging, culturally appropriate content.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+          {adlFeatures.map((feature, index) => (
             <Card key={index} className="feature-card border-none hover:shadow-md transition-all duration-300 hover:bg-sarya-purple/5">
               <CardHeader>
                 <div className="h-12 w-12 rounded-full bg-sarya-purple/20 flex items-center justify-center mb-4">
@@ -58,11 +71,30 @@ const Features = () => {
           ))}
         </div>
 
+        <div className="mt-12 pt-8 border-t border-gray-100">
+          <h3 className="text-2xl font-bold text-sarya-purple-dark mb-6 text-center">Essential Daily Living Skills We Cover</h3>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              "Simple Laundry", "Dressing Self", "Feeding with Spoon/Fork", 
+              "Grooming", "Handling Emergencies", "Personal Space & Safety",
+              "Managing Money", "Polite Behavior", "Basic Meal Prep",
+              "Shopping from Lists", "School Bag Care", "Independent Toileting",
+              "Managing Periods", "Using Sanitary Products", "Waiting Patiently",
+              "Washing Hands Properly"
+            ].map((skill, index) => (
+              <div key={index} className="bg-sarya-purple/10 rounded-xl p-3 flex items-center justify-center">
+                <p className="text-center text-sarya-purple-dark font-medium text-sm">{skill}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-16 bg-sarya-purple/10 p-8 rounded-3xl">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-sarya-purple-dark">AI-Powered Personal Assistant</h3>
             <p className="text-base text-gray-700 mt-2 max-w-2xl mx-auto">
-              We're integrating AI and machine learning to create a personalized buddy for your child
+              Our AI buddy creates personalized learning experiences for your child
             </p>
           </div>
           
@@ -70,19 +102,19 @@ const Features = () => {
             <div className="bg-white p-5 rounded-2xl shadow-sm">
               <h4 className="font-bold text-sarya-purple-dark mb-2">Personalized Activities</h4>
               <p className="text-gray-600">
-                Our AI suggests activities specifically tailored to your child's developmental needs, interests, and abilities
+                Tailored to your child's developmental needs, interests, and abilities
+              </p>
+            </div>
+            <div className="bg-white p-5 rounded-2xl shadow-sm">
+              <h4 className="font-bold text-sarya-purple-dark mb-2">Customized Routines</h4>
+              <p className="text-gray-600">
+                Create step-by-step visual schedules that work for your child's unique needs
               </p>
             </div>
             <div className="bg-white p-5 rounded-2xl shadow-sm">
               <h4 className="font-bold text-sarya-purple-dark mb-2">Progress Tracking</h4>
               <p className="text-gray-600">
-                Machine learning algorithms track your child's progress and adjust recommendations for optimal development
-              </p>
-            </div>
-            <div className="bg-white p-5 rounded-2xl shadow-sm">
-              <h4 className="font-bold text-sarya-purple-dark mb-2">Cultural Adaptation</h4>
-              <p className="text-gray-600">
-                Our AI understands Indian culture and adapts content to reflect familiar environments and situations
+                Monitor your child's development with detailed insights and achievements
               </p>
             </div>
           </div>

@@ -25,9 +25,16 @@ const Hero = () => {
     <section className="py-16 md:py-24">
       <div className="container-custom grid md:grid-cols-2 gap-8 items-center">
         <div className="flex flex-col gap-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sarya-purple-dark">
-            Sarya <span className="font-devanagari">(सार्या)</span>
-          </h1>
+          <div className="flex items-center gap-3">
+            <img 
+              src="/lovable-uploads/f9e05724-c3d3-444d-97f4-19eac5386a86.png" 
+              alt="Sarya Logo" 
+              className="h-16 md:h-20"
+            />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sarya-purple-dark">
+              Sarya <span className="font-devanagari">(सार्या)</span>
+            </h1>
+          </div>
           
           <div className="h-24 relative">
             <div 
@@ -48,7 +55,7 @@ const Hero = () => {
           
           <div className="space-y-3 mt-4">
             <p className="text-lg text-gray-600">
-              A specially designed app for parents of children with autism, ADHD, Down syndrome, and special needs, tailored for Indian families.
+              A specially designed app for Indian children with autism, ADHD, Down syndrome, and special needs to develop essential daily life skills and routines.
             </p>
           </div>
           
@@ -63,14 +70,14 @@ const Hero = () => {
             </Button>
           </div>
           <div className="mt-2">
-            <p className="text-sarya-purple-dark font-semibold">Only ₹899/month - Invest in your child's future today!</p>
+            <p className="text-sarya-purple-dark font-semibold">Starting at ₹899/month - Save with our yearly plan!</p>
           </div>
         </div>
         
         <div className="flex justify-center">
           <div className="relative w-full max-w-md">
             <img 
-              src="/lovable-uploads/55a9c973-3128-46eb-8f6c-8ab5f7adcd87.png" 
+              src="/lovable-uploads/cd839843-e0b2-45b2-bf9b-08aff88fc754.png" 
               alt="Sarya App - Daily activities for children with special needs" 
               className="rounded-3xl shadow-lg w-full object-cover animate-float"
             />
