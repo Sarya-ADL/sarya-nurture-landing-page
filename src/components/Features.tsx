@@ -3,12 +3,11 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Bath, 
-  Spoon, 
+  Baby, 
   PersonStanding, 
   School, 
   HeartHandshake, 
-  Video,
-  WashingHands
+  Video
 } from 'lucide-react';
 
 const Features = () => {
@@ -21,7 +20,7 @@ const Features = () => {
     {
       title: "Eating & Drinking Skills",
       description: "Fun activities to develop skills like using spoons, forks and drinking without spilling.",
-      icon: Spoon
+      icon: Baby
     },
     {
       title: "Dressing & Grooming",
@@ -94,7 +93,7 @@ const Features = () => {
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-sarya-purple-dark">AI-Powered Personal Assistant</h3>
             <p className="text-base text-gray-700 mt-2 max-w-2xl mx-auto">
-              Our AI buddy creates personalized learning experiences for your child
+              Personalized learning journeys tailored to your child's needs and abilities
             </p>
           </div>
           

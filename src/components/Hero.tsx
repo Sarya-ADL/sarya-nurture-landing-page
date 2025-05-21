@@ -9,7 +9,9 @@ const Hero = () => {
     { text: "Nurturing every child with care.", language: "English" },
     { text: "हर बच्चे की देखभाल, प्यार से।", language: "Hindi" },
     { text: "ప్రతి పిల్లకు ప్రేమతో నురేపు.", language: "Telugu" },
+    { text: "ಪ್ರತಿ ಮಗುವನ್ನು ಪ್ರೀತಿಯಿಂದ ಬೆಳೆಸುವುದು.", language: "Kannada" },
     { text: "ஒவ்வொரு குழந்தைக்கும் அன்பும் பராமரிப்பும்.", language: "Tamil" },
+    { text: "ભાલબાસા અને સંભાળ સાથે દરેક બાળક.", language: "Gujarati" },
     { text: "ভালবাসা ও যত্নে প্রতিটি শিশু।", language: "Bengali" },
     { text: "ഒരൊരോ കുഞ്ഞിനും സ്‌നേഹപരിചരണം.", language: "Malayalam" },
   ];
@@ -26,11 +28,14 @@ const Hero = () => {
       <div className="container-custom grid md:grid-cols-2 gap-8 items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <img 
-              src="/lovable-uploads/f9e05724-c3d3-444d-97f4-19eac5386a86.png" 
-              alt="Sarya Logo" 
-              className="h-16 md:h-20"
-            />
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-sarya-purple/30 to-sarya-peach/30 rounded-full animate-pulse"></div>
+              <img 
+                src="/lovable-uploads/f9e05724-c3d3-444d-97f4-19eac5386a86.png" 
+                alt="Sarya Logo" 
+                className="h-16 md:h-20 relative z-10 drop-shadow-lg"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sarya-purple-dark">
               Sarya <span className="font-devanagari">(सार्या)</span>
             </h1>
@@ -76,15 +81,13 @@ const Hero = () => {
         
         <div className="flex justify-center">
           <div className="relative w-full max-w-md">
-            <img 
-              src="/lovable-uploads/cd839843-e0b2-45b2-bf9b-08aff88fc754.png" 
-              alt="Sarya App - Daily activities for children with special needs" 
-              className="rounded-3xl shadow-lg w-full object-cover animate-float"
-            />
-            <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-sm p-3 rounded-xl">
-              <p className="text-sm text-sarya-purple-dark">
-                Our AI-powered buddy suggests personalized activities for your child's unique needs.
-              </p>
+            <div className="relative mx-auto bg-black rounded-[3rem] overflow-hidden border-[14px] border-black w-[270px] h-[540px] shadow-2xl">
+              <div className="absolute top-0 w-[40%] h-[30px] bg-black left-[30%] rounded-b-xl z-10"></div>
+              <img 
+                src="/lovable-uploads/cd839843-e0b2-45b2-bf9b-08aff88fc754.png" 
+                alt="Sarya App - Daily activities for children with special needs" 
+                className="w-full h-full object-cover rounded-[2rem]"
+              />
             </div>
           </div>
         </div>

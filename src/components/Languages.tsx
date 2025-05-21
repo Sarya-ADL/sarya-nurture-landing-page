@@ -8,8 +8,16 @@ const Languages = () => {
       native: "हिन्दी"
     },
     {
+      name: "English",
+      native: "English"
+    },
+    {
       name: "Tamil",
       native: "தமிழ்"
+    },
+    {
+      name: "Kannada",
+      native: "ಕನ್ನಡ"
     },
     {
       name: "Telugu",
@@ -18,6 +26,10 @@ const Languages = () => {
     {
       name: "Bengali",
       native: "বাংলা"
+    },
+    {
+      name: "Gujarati",
+      native: "ગુજરાતી"
     },
     {
       name: "Malayalam",
@@ -35,7 +47,7 @@ const Languages = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-5 gap-6 mb-16">
+        <div className="grid md:grid-cols-4 gap-6 mb-16">
           {languages.map((language) => (
             <div key={language.name} className="flex flex-col items-center bg-sarya-purple/10 rounded-3xl p-6 shadow-sm hover:shadow-md transition-all">
               <h3 className="text-xl font-bold text-sarya-purple-dark mb-2">{language.name}</h3>
