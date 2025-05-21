@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Backpack, Toothbrush, CalendarDays, Globe2, HeartHandshake } from 'lucide-react';
+import { Backpack, Bath, CalendarDays, Globe2, HeartHandshake } from 'lucide-react';
 
 const Features = () => {
   const features = [
     {
       title: "Daily Self-Care Routines",
       description: "Age-appropriate routines for hygiene, nutrition, and self-care tasks designed specifically for children with special needs.",
-      icon: Toothbrush
+      icon: Bath
     },
     {
       title: "Age-Based Learning",
