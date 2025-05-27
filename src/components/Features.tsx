@@ -99,50 +99,6 @@ const Features = () => {
           ))}
         </div>
 
-        <div className="mb-12 pt-8 border-t border-gray-100">
-          <h3 className="text-2xl font-bold text-sarya-purple-dark mb-6 text-center">All Activities Available in Sarya</h3>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {specificActivities.map((activity, index) => (
-              <div key={index} className="bg-sarya-purple/10 rounded-xl p-3 flex items-center justify-center min-h-[60px]">
-                <p className="text-center text-sarya-purple-dark font-medium text-sm">{activity}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-16 bg-sarya-purple/10 p-8 rounded-3xl">
-          <div className="text-center mb-6">
-            <div className="h-12 w-12 rounded-full bg-sarya-purple/20 flex items-center justify-center mb-4 mx-auto">
-              <Video className="h-6 w-6 text-sarya-purple-dark" />
-            </div>
-            <h3 className="text-2xl font-bold text-sarya-purple-dark">Video-Based Learning</h3>
-            <p className="text-base text-gray-700 mt-2 max-w-2xl mx-auto">
-              All activities include step-by-step video demonstrations featuring Indian children in familiar settings
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-5">
-            <div className="bg-white p-5 rounded-2xl shadow-sm">
-              <h4 className="font-bold text-sarya-purple-dark mb-2">Indian Context</h4>
-              <p className="text-gray-600">
-                Activities set in Indian homes, schools, and communities with familiar foods, clothes, and customs
-              </p>
-            </div>
-            <div className="bg-white p-5 rounded-2xl shadow-sm">
-              <h4 className="font-bold text-sarya-purple-dark mb-2">Step-by-Step Guides</h4>
-              <p className="text-gray-600">
-                Clear visual instructions broken down into simple, manageable steps for easy learning
-              </p>
-            </div>
-            <div className="bg-white p-5 rounded-2xl shadow-sm">
-              <h4 className="font-bold text-sarya-purple-dark mb-2">Progress Tracking</h4>
-              <p className="text-gray-600">
-                Monitor your child's mastery of each skill with detailed progress reports and achievements
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

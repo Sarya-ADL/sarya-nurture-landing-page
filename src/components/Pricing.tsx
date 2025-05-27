@@ -85,7 +85,6 @@ const Pricing = () => {
           
           <div className="bg-sarya-purple/10 rounded-xl p-5 mt-10">
             <p className="text-center text-gray-700">
-              <strong>All plans include:</strong> Free updates, multiple child profiles, and works on any device. Cancel anytime during your trial.
             </p>
           </div>
         </div>

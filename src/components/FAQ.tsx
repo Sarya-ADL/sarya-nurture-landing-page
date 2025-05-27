@@ -64,22 +64,8 @@ const FAQ = () => {
             ))}
           </Accordion>
         </div>
-        
-        <div className="mt-16 bg-sarya-peach/20 rounded-3xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-sarya-purple-dark mb-4">Need personalized guidance for your child?</h3>
-          <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
-            Our team of Indian special needs experts is here to help you create the best ADL learning plan for your child's unique needs and abilities.
-          </p>
-          <a 
-            href="mailto:support@thesarya.com" 
-            className="inline-block bg-sarya-purple hover:bg-sarya-purple-dark text-white font-medium py-3 px-8 rounded-full transition-all shadow-md hover:shadow-lg"
-          >
-            Contact Our Experts
-          </a>
-        </div>
       </div>
     </section>
   );
 };
-
 export default FAQ;

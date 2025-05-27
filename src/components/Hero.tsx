@@ -6,14 +6,14 @@ const Hero = () => {
   const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
   
   const taglines = [
-    { text: "Essential life skills for every Indian child.", language: "English" },
-    { text: "हर भारतीय बच्चे के लिए जरूरी जीवन कौशल।", language: "Hindi" },
-    { text: "ప్రతి భారతీయ పిల్లకు అవసరమైన జీవిత నైపుణ్యాలు.", language: "Telugu" },
-    { text: "ಪ್ರತಿ ಭಾರತೀಯ ಮಗುವಿಗೆ ಅವಶ್ಯಕ ಜೀವನ ಕೌಶಲ್ಯಗಳು.", language: "Kannada" },
-    { text: "ஒவ்வொரு இந்திய குழந்தைக்கும் அத்தியாவசிய வாழ்க்கை திறன்கள்.", language: "Tamil" },
-    { text: "દરેક ભારતીય બાળક માટે જરૂરી જીવન કૌશલ્યો.", language: "Gujarati" },
-    { text: "প্রতিটি ভারতীয় শিশুর জন্য প্রয়োজনীয় জীবন দক্ষতা।", language: "Bengali" },
-    { text: "എല്ലാ ഇന്ത്യൻ കുട്ടികൾക്കും ആവശ്യമായ ജീവിത വൈദഗ്ധ്യം.", language: "Malayalam" },
+    { text: "Essential life skills for every Indian child.", language: "" },
+    { text: "हर भारतीय बच्चे के लिए जरूरी जीवन कौशल।", language: "" },
+    { text: "ప్రతి భారతీయ పిల్లకు అవసరమైన జీవిత నైపుణ్యాలు.", language: "" },
+    { text: "ಪ್ರತಿ ಭಾರತೀಯ ಮಗುವಿಗೆ ಅವಶ್ಯಕ ಜೀವನ ಕೌಶಲ್ಯಗಳು.", language: "" },
+    { text: "ஒவ்வொரு இந்திய குழந்தைக்கும் அத்தியாவசிய வாழ்க்கை திறன்கள்.", language: "" },
+    { text: "દરેક ભારતીય બાળક માટે જરૂરી જીવન કૌશલ્યો.", language: "" },
+    { text: "প্রতিটি ভারতীয় শিশুর জন্য প্রয়োজনীয় জীবন দক্ষতা।", language: "" },
+    { text: "എല്ലാ ഇന്ത്യൻ കുട്ടികൾക്കും ആവശ്യമായ ജീവിത വൈദഗ്ധ്യം.", language: "" },
   ];
 
   useEffect(() => {
@@ -89,7 +89,7 @@ const Hero = () => {
           <div className="mt-2">
             <p className="text-sarya-purple-dark font-semibold">Starting at ₹899/month - Get 40% OFF with our yearly plan!</p>
             <div className="mt-2 inline-block bg-sarya-purple/10 px-4 py-2 rounded-lg">
-              <span className="text-sm text-sarya-purple-dark">Join <b>5,000+</b> Indian families already using Sarya</span>
+              <span className="text-sm text-sarya-purple-dark">Join <b>500+</b> Indian families already using Sarya</span>
             </div>
           </div>
         </div>
@@ -105,10 +105,10 @@ const Hero = () => {
               />
             </div>
             <div className="absolute -bottom-10 -right-8 bg-sarya-purple/20 rounded-full px-5 py-3 shadow-md">
-              <p className="text-sarya-purple-dark font-medium text-sm">Made for Indian families</p>
+              <p className="text-sarya-purple-dark font-medium text-sm">Made for India</p>
             </div>
             <div className="absolute -top-6 -left-4 bg-sarya-peach/30 rounded-full px-5 py-3 shadow-md animate-float-delay-2">
-              <p className="text-sarya-purple-dark font-medium text-sm">8 regional languages</p>
+              <p className="text-sarya-purple-dark font-medium text-sm">Regional languages</p>
             </div>
           </div>
         </div>

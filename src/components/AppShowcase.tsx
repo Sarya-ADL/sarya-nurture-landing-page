@@ -21,7 +21,7 @@ const AppShowcase = () => {
             </p>
             <div className="flex justify-center">
               <img 
-                src="/lovable-uploads/6e05ac42-50f6-4207-bdbf-d24a9f668f00.png" 
+                src="/lovable-uploads/e39c5970-b0ea-4a93-9801-7e9394465bb5.png" 
                 alt="Brushing teeth routine" 
                 className="rounded-2xl w-48 h-48 object-cover shadow-md" 
               />
@@ -37,7 +37,7 @@ const AppShowcase = () => {
             <div className="bg-white p-6 rounded-3xl shadow-lg w-full">
               <h3 className="text-2xl font-bold text-sarya-purple-dark text-center mb-4">3D Product Overview</h3>
               <p className="text-gray-700 text-center">
-                Sarya offers a complete care system with over 200+ activities for children with autism, ADHD, and special needs, specifically designed for Indian families.
+                Sarya offers a complete care system with over 20+ activities for children with autism, ADHD, and special needs, specifically designed for Indian families.
               </p>
             </div>
           </div>
