@@ -6,14 +6,14 @@ const Hero = () => {
   const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
   
   const taglines = [
-    { text: "Nurturing every Indian child with care.", language: "English" },
-    { text: "हर भारतीय बच्चे की देखभाल, प्यार से।", language: "Hindi" },
-    { text: "ప్రతి భారతీయ పిల్లకు ప్రేమతో నురేపు.", language: "Telugu" },
-    { text: "ಪ್ರತಿ ಭಾರತೀಯ ಮಗುವನ್ನು ಪ್ರೀತಿಯಿಂದ ಬೆಳೆಸುವುದು.", language: "Kannada" },
-    { text: "ஒவ்வொரு இந்திய குழந்தைக்கும் அன்பும் பராமரிப்பும்.", language: "Tamil" },
-    { text: "દરેક ભારતીય બાળક માટે લાગણી અને સંભાળ.", language: "Gujarati" },
-    { text: "প্রতিটি ভারতীয় শিশুর জন্য স্নেহ ও যত্ন।", language: "Bengali" },
-    { text: "എല്ലാ ഇന്ത്യൻ കുട്ടികൾക്കും സ്നേഹവും പരിചരണവും.", language: "Malayalam" },
+    { text: "Essential life skills for every Indian child.", language: "English" },
+    { text: "हर भारतीय बच्चे के लिए जरूरी जीवन कौशल।", language: "Hindi" },
+    { text: "ప్రతి భారతీయ పిల్లకు అవసరమైన జీవిత నైపుణ్యాలు.", language: "Telugu" },
+    { text: "ಪ್ರತಿ ಭಾರತೀಯ ಮಗುವಿಗೆ ಅವಶ್ಯಕ ಜೀವನ ಕೌಶಲ್ಯಗಳು.", language: "Kannada" },
+    { text: "ஒவ்வொரு இந்திய குழந்தைக்கும் அத்தியாவசிய வாழ்க்கை திறன்கள்.", language: "Tamil" },
+    { text: "દરેક ભારતીય બાળક માટે જરૂરી જીવન કૌશલ્યો.", language: "Gujarati" },
+    { text: "প্রতিটি ভারতীয় শিশুর জন্য প্রয়োজনীয় জীবন দক্ষতা।", language: "Bengali" },
+    { text: "എല്ലാ ഇന്ത്യൻ കുട്ടികൾക്കും ആവശ്യമായ ജീവിത വൈദഗ്ധ്യം.", language: "Malayalam" },
   ];
 
   useEffect(() => {
@@ -38,10 +38,10 @@ const Hero = () => {
             </div>
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sarya-purple-dark">
-                Sarya <span className="font-devanagari">(सार्या)</span>
+                Sarya
               </h1>
               <div className="inline-block bg-sarya-purple/20 px-3 py-1 rounded-full text-sm text-sarya-purple-dark mt-2">
-                India's First Special Needs ADL App
+                India's First ADL Skills App for Special Needs
               </div>
             </div>
           </div>
@@ -65,18 +65,25 @@ const Hero = () => {
           
           <div className="space-y-3 mt-4">
             <p className="text-lg text-gray-600">
-              A specially designed app for Indian children with autism, ADHD, Down syndrome, and special needs to develop essential daily life skills and routines through culturally relevant content.
+              A specially designed app for Indian children with autism, ADHD, Down syndrome, and special needs to master 
+              essential daily life skills through culturally relevant activities and step-by-step video guides.
             </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="bg-sarya-purple/20 px-3 py-1 rounded-full text-sm text-sarya-purple-dark">Self-Care Skills</span>
+              <span className="bg-sarya-peach/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark">Home Skills</span>
+              <span className="bg-sarya-green/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark">School Readiness</span>
+              <span className="bg-sarya-blue/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark">Social Behavior</span>
+            </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
             <Button className="btn-download bg-sarya-purple hover:bg-sarya-purple-dark">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-apple"><path d="M12 20.94c1.5 0 2.75 -.75 4 -2.25c-1.25 -.5 -2.5 -0.75 -4 -0.75s-2.75 0.25 -4 0.75c1.25 1.5 2.5 2.25 4 2.25z" /><path d="M12 14c1.5 0 2.75 -.25 4 -0.75v-2.25c0 -1 -0.75 -2 -2 -2h-4c-1.25 0 -2 1 -2 2v2.25c1.25 .5 2.5 0.75 4 0.75z" /><path d="M12 14c1.5 0 2.75 -.25 4 -0.75v-2.25c0 -1 -0.75 -2 -2 -2h-4c-1.25 0 -2 1 -2 2v2.25c1.25 .5 2.5 0.75 4 0.75z" /></svg>
-              App Store
+              Download for iOS
             </Button>
             <Button className="btn-download bg-sarya-purple hover:bg-sarya-purple-dark">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 7v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /></svg>
-              Google Play
+              Download for Android
             </Button>
           </div>
           <div className="mt-2">

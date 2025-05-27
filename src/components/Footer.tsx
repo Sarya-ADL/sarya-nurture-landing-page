@@ -17,26 +17,29 @@ const Footer = () => {
               <span className="text-xl font-bold">Sarya</span>
             </div>
             <p className="text-sm text-white/80">
-              Nurturing every child with care across India through culturally sensitive support for families of children with special needs.
+              Teaching essential life skills to every Indian child with special needs through culturally relevant activities and expert guidance.
             </p>
           </div>
           
           <div>
-            <h4 className="font-bold mb-4">App</h4>
-            <ul className="space-y-2 text-white/80">
-              <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#languages" className="hover:text-white transition-colors">Languages</a></li>
-              <li><a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a></li>
-              <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
+            <h4 className="font-bold mb-4">ADL Skills</h4>
+            <ul className="space-y-2 text-white/80 text-sm">
+              <li>Self-Care & Hygiene</li>
+              <li>Home & Kitchen Skills</li>
+              <li>School Readiness</li>
+              <li>Social Behavior</li>
+              <li>Safety Awareness</li>
+              <li>Money & Shopping</li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-bold mb-4">Resources</h4>
-            <ul className="space-y-2 text-white/80">
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Community</a></li>
+            <h4 className="font-bold mb-4">Support</h4>
+            <ul className="space-y-2 text-white/80 text-sm">
+              <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
+              <li><a href="#languages" className="hover:text-white transition-colors">Languages</a></li>
+              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
               <li>
                 <a 
                   href="mailto:support@thesarya.com" 
@@ -61,12 +64,15 @@ const Footer = () => {
                 Google Play
               </a>
             </div>
+            <p className="text-xs text-white/60 mt-4">
+              Available in 8 Indian languages
+            </p>
           </div>
         </div>
         
         <div className="border-t border-white/20 pt-8 text-center">
-          <p className="text-white/70 mb-2">Made with ❤️ for every child</p>
-          <p className="text-sm text-white/60">© {new Date().getFullYear()} Sarya. All rights reserved.</p>
+          <p className="text-white/70 mb-2">Empowering every Indian child with essential life skills</p>
+          <p className="text-sm text-white/60">© {new Date().getFullYear()} Sarya. All rights reserved. | Visit us at thesarya.com</p>
         </div>
       </div>
     </footer>
