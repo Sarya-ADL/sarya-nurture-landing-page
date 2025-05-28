@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const FAQ = () => {
   const faqs = [
     {
-      question: "What are Activities of Daily Living (ADLs) and why are they important for children with autism and ADHD?",
+      question: "What are Activities of Daily Living (ADLs) and why are they important for children with Autism and Special Needs?",
       answer: "Activities of Daily Living (ADLs) are essential self-care and life skills that every child needs to learn for independence. For children with autism, ADHD, and other special needs, these skills require structured teaching with visual supports, repetition, and breaking tasks into smaller steps. ADLs include self-care (brushing teeth, bathing), home skills (helping with chores), school readiness (packing bags), social behavior (greeting elders), and safety awareness (knowing emergency contacts)."
     },
     {
