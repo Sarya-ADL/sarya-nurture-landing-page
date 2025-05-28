@@ -1,9 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
+  // Device detection for mobile platform
+  const [platform, setPlatform] = useState<'ios' | 'android' | 'desktop'>('desktop');
   
   const taglines = [
     { text: "Essential life skills for every Indian child.", language: "" },
@@ -21,6 +22,17 @@ const Hero = () => {
       setCurrentTaglineIndex((prevIndex) => (prevIndex + 1) % taglines.length);
     }, 3000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const ua = navigator.userAgent || navigator.vendor;
+    if (/android/i.test(ua)) {
+      setPlatform('android');
+    } else if (/iPad|iPhone|iPod/.test(ua)) {
+      setPlatform('ios');
+    } else {
+      setPlatform('desktop');
+    }
   }, []);
 
   return (
@@ -75,15 +87,33 @@ const Hero = () => {
               <span className="bg-sarya-blue/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark">Social Behavior</span>
             </div>
           </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
-            <Button className="btn-download bg-sarya-purple hover:bg-sarya-purple-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-apple"><path d="M12 20.94c1.5 0 2.75 -.75 4 -2.25c-1.25 -.5 -2.5 -0.75 -4 -0.75s-2.75 0.25 -4 0.75c1.25 1.5 2.5 2.25 4 2.25z" /><path d="M12 14c1.5 0 2.75 -.25 4 -0.75v-2.25c0 -1 -0.75 -2 -2 -2h-4c-1.25 0 -2 1 -2 2v2.25c1.25 .5 2.5 0.75 4 0.75z" /><path d="M12 14c1.5 0 2.75 -.25 4 -0.75v-2.25c0 -1 -0.75 -2 -2 -2h-4c-1.25 0 -2 1 -2 2v2.25c1.25 .5 2.5 0.75 4 0.75z" /></svg>
-              Download for iOS
-            </Button>
-            <Button className="btn-download bg-sarya-purple hover:bg-sarya-purple-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 7v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /></svg>
-              Download for Android
+            {platform === 'ios' && (
+              <Button className="btn-download bg-sarya-purple hover:bg-sarya-purple-dark font-bold animate-float" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-apple"><path d="M12 20.94c1.5 0 2.75 -.75 4 -2.25c-1.25 -.5 -2.5 -0.75 -4 -0.75s-2.75 0.25 -4 0.75c1.25 1.5 2.5 2.25 4 2.25z" /><path d="M12 14c1.5 0 2.75 -.25 4 -0.75v-2.25c0 -1 -0.75 -2 -2 -2h-4c-1.25 0 -2 1 -2 2v2.25c1.25 .5 2.5 0.75 4 0.75z" /><path d="M12 14c1.5 0 2.75 -.25 4 -0.75v-2.25c0 -1 -0.75 -2 -2 -2h-4c-1.25 0 -2 1 -2 2v2.25c1.25 .5 2.5 0.75 4 0.75z" /></svg>
+                iOS App – Coming Soon! 🚀
+              </Button>
+            )}
+            {platform === 'android' && (
+              <Button className="btn-download bg-sarya-green hover:bg-sarya-purple-dark font-bold animate-float" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 7v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /></svg>
+                Android App – Coming Soon! 🚀
+              </Button>
+            )}
+            {platform === 'desktop' && (
+              <Button className="btn-download bg-sarya-purple hover:bg-sarya-purple-dark font-bold animate-float" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-apple"><path d="M12 20.94c1.5 0 2.75 -.75 4 -2.25c-1.25 -.5 -2.5 -0.75 -4 -0.75s-2.75 0.25 -4 0.75c1.25 1.5 2.5 2.25 4 2.25z" /><path d="M12 14c1.5 0 2.75 -.25 4 -0.75v-2.25c0 -1 -0.75 -2 -2 -2h-4c-1.25 0 -2 1 -2 2v2.25c1.25 .5 2.5 0.75 4 0.75z" /><path d="M12 14c1.5 0 2.75 -.25 4 -0.75v-2.25c0 -1 -0.75 -2 -2 -2h-4c-1.25 0 -2 1 -2 2v2.25c1.25 .5 2.5 0.75 4 0.75z" /></svg>
+                iOS App – Coming Soon!
+              </Button>
+            )}
+            {platform === 'desktop' && (
+              <Button className="btn-download bg-sarya-green hover:bg-sarya-purple-dark font-bold animate-float" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 7v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /></svg>
+                Android App – Coming Soon!
+              </Button>
+            )}
+            <Button className="btn-download bg-sarya-green hover:bg-sarya-purple-dark font-bold" style={{ minWidth: 180 }}>
+              Join our beta program
             </Button>
           </div>
           <div className="mt-2">

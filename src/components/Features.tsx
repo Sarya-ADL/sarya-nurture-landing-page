@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
@@ -66,39 +65,36 @@ const Features = () => {
   return (
     <section id="features" className="py-20 bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-sarya-purple-dark mb-4">
             Main ADL Skills for Indian Children
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Sarya teaches essential Activities of Daily Living (ADL) through culturally relevant content designed specifically for Indian families and children with special needs.
+            Sarya teaches essential Activities of Daily Living (ADL) through culturally relevant content designed for Indian families.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {adlCategories.map((category, index) => (
-            <Card key={index} className="feature-card border-none hover:shadow-md transition-all duration-300 hover:bg-sarya-purple/5 h-full">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-full bg-sarya-purple/20 flex items-center justify-center mb-4">
-                  <category.icon className="h-6 w-6 text-sarya-purple-dark" />
-                </div>
-                <CardTitle className="text-xl text-sarya-purple-dark">{category.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-base mb-4">{category.description}</CardDescription>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  {category.activities.map((activity, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="text-sarya-purple mr-2">•</span>
-                      {activity}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
+            <Card key={index} className="flex flex-col items-center justify-center border-none rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-sarya-purple/10 to-sarya-peach/10 p-8 min-h-[320px]">
+              <div className="h-16 w-16 rounded-full bg-sarya-purple/20 flex items-center justify-center mb-4 shadow-md">
+                <category.icon className="h-8 w-8 text-sarya-purple-dark" />
+              </div>
+              <CardTitle className="text-lg text-sarya-purple-dark text-center mb-2 font-bold">
+                {category.title}
+              </CardTitle>
+              <ul className="text-sarya-purple-dark text-center text-base font-medium space-y-1 mb-2">
+                {category.activities.slice(0, 2).map((activity, idx) => (
+                  <li key={idx}>• {activity}</li>
+                ))}
+              </ul>
             </Card>
           ))}
         </div>
-
+        <div className="flex justify-center mt-8">
+          <button className="btn-download bg-sarya-green hover:bg-sarya-purple-dark text-sarya-purple-dark font-bold text-lg px-8 py-4 rounded-full shadow-lg transition-all animate-float">
+            Join Beta Access
+          </button>
+        </div>
       </div>
     </section>
   );
