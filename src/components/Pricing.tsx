@@ -1,78 +1,124 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Check, Star } from "lucide-react";
+import { Check, Zap } from 'lucide-react';
+
+const PricingCard = ({ plan, price, period, isRecommended = false, savings = "" }) => {
+  return (
+    <div className={`${isRecommended ? 'bg-gradient-to-br from-sarya-purple/30 to-sarya-peach/30 p-1' : ''} rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300`}>
+      <div className="bg-white rounded-3xl p-8 h-full relative flex flex-col">
+        {isRecommended && (
+          <div className="absolute -right-10 top-6 bg-sarya-purple-dark text-white px-12 py-1 rotate-45 text-sm font-medium shadow-lg">
+            Recommended
+          </div>
+        )}
+        <div className="mb-6 flex flex-col items-center">
+          <span className={`inline-block ${isRecommended ? 'bg-sarya-peach/30' : 'bg-sarya-purple/20'} rounded-full px-4 py-2 text-sarya-purple-dark font-bold text-lg mb-3`}>
+            {plan}
+          </span>
+          <div className="flex items-baseline gap-1 mb-2">
+            <span className="text-4xl font-bold text-sarya-purple-dark">₹{price}</span>
+            <span className="text-gray-600">/{period}</span>
+          </div>
+          {savings && (
+            <p className="text-sarya-purple-dark font-medium mb-2">{savings}</p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Pricing = () => {
   return (
     <section id="pricing" className="py-20 bg-gradient-to-b from-white to-sarya-purple/10">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-sarya-purple-dark mb-2">Plans Made for Indian Families</h2>
+          <span className="inline-block bg-sarya-purple/10 text-sarya-purple-dark px-4 py-1 rounded-full text-sm font-medium mb-4">
+            Flexible Pricing
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-sarya-purple-dark mb-4">
+            Choose the Perfect Plan for Your Family
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose a plan that fits your family—get all of Sarya’s features for one simple price.
+            Simple, transparent pricing that grows with your needs. Subscribe monthly or save more with our longer plans.
           </p>
         </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Monthly Plan */}
-            <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-sarya-purple/10 flex flex-col items-center hover:shadow-2xl transition-all">
-              <div className="mb-4 flex flex-col items-center">
-                <span className="inline-block bg-sarya-purple/20 rounded-full px-4 py-2 text-sarya-purple-dark font-bold text-lg mb-2">Monthly</span>
-                <div className="flex items-end gap-1 mb-2">
-                  <span className="text-3xl font-bold text-sarya-purple-dark">₹899</span>
-                  <span className="text-gray-600">/month</span>
-                </div>
-                <p className="text-gray-600 mb-4 text-center">Flexible month-to-month access</p>
-                <Button className="w-full bg-sarya-purple hover:bg-sarya-purple-dark font-bold">Start 7-day Free Trial</Button>
+
+        {/* Subscription Benefits */}
+        <div className="max-w-xl mx-auto mb-12">
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-sarya-purple/10">
+            <div className="grid gap-4">
+              <div className="flex items-center gap-3">
+                <Check className="text-sarya-purple-dark" />
+                <p className="text-gray-700">Pause or cancel your subscription anytime</p>
               </div>
-              <ul className="w-full mt-6 space-y-3">
-                {["200+ Daily Living Activities", "5 Indian Languages", "Basic Progress Tracking", "Parent Community Access"].map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-sarya-purple-dark flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Yearly Plan (Highlighted) */}
-            <div className="bg-gradient-to-br from-sarya-purple/30 to-sarya-peach/30 rounded-3xl p-1 shadow-2xl hover:scale-105 transition-transform">
-              <div className="bg-white rounded-3xl p-8 h-full relative flex flex-col items-center overflow-hidden">
-                <div className="absolute -right-10 top-6 bg-sarya-purple-dark text-white px-12 py-1 rotate-45 text-sm font-medium shadow-lg">
-                  Best Value
-                </div>
-                <div className="mb-4 flex flex-col items-center">
-                  <span className="inline-block bg-sarya-peach/30 rounded-full px-4 py-2 text-sarya-purple-dark font-bold text-lg mb-2 flex items-center gap-2">Yearly <Star className="h-5 w-5 fill-sarya-yellow stroke-sarya-yellow ml-1" /></span>
-                  <div className="flex items-end gap-1 mb-2">
-                    <span className="text-3xl font-bold text-sarya-purple-dark">₹9,999</span>
-                    <span className="text-gray-600">/year</span>
-                  </div>
-                  <p className="text-sarya-purple-dark font-medium mb-1">Save ₹799 compared to monthly</p>
-                  <p className="text-gray-600 mb-4 text-center">Full access to premium features</p>
-                  <Button className="w-full bg-sarya-purple-dark hover:bg-sarya-purple text-lg font-bold">Start 7-day Free Trial</Button>
-                </div>
-                <ul className="w-full mt-6 space-y-3">
-                  {[
-                    "Everything in monthly plan",
-                    "Advanced AI personalization",
-                    "Create custom routines", 
-                    "Detailed progress analytics",
-                    "Priority customer support",
-                    "Early access to new features"
-                  ].map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3">
-                      <Check className="h-5 w-5 text-sarya-purple-dark flex-shrink-0" />
-                      <span className="text-gray-700 font-medium">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex items-center gap-3">
+                <Check className="text-sarya-purple-dark" />
+                <p className="text-gray-700">Access to all current and future features</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="text-sarya-purple-dark" />
+                <p className="text-gray-700">Full support in English, Hindi, and more languages</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Zap className="text-sarya-purple-dark" />
+                <p className="text-gray-700">Early access to new features with yearly plans</p>
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-10">
-            <div className="bg-sarya-purple/10 rounded-xl p-5 w-full max-w-xl">
-              <p className="text-center text-sarya-purple-dark font-semibold text-lg">
-                All plans include access for your whole family. Cancel anytime. No hidden fees.
-              </p>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <PricingCard 
+            plan="Monthly"
+            price="899"
+            period="month"
+          />
+          <PricingCard 
+            plan="Quarterly"
+            price="2,699"
+            period="quarter"
+            savings="Save ₹998 vs monthly"
+          />
+          <PricingCard 
+            plan="Half Yearly"
+            price="4,999"
+            period="6 months"
+            savings="Save ₹2,395 vs monthly"
+          />
+          <PricingCard 
+            plan="Yearly"
+            price="9,999"
+            period="year"
+            isRecommended={true}
+            savings="Save ₹4,789 vs monthly"
+          />
+        </div>
+
+        {/* Additional Info */}
+        <div className="mt-12 text-center">
+          <div className="inline-flex items-center gap-2 bg-sarya-purple/10 px-6 py-3 rounded-full">
+            <Zap className="text-sarya-purple-dark" />
+            <p className="text-sarya-purple-dark font-medium">
+              Yearly subscribers get priority access to new features and updates!
+            </p>
+          </div>
+        </div>
+
+        {/* FAQ Snippet */}
+        <div className="mt-16 max-w-2xl mx-auto">
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-sarya-purple/10">
+            <h3 className="text-xl font-bold text-sarya-purple-dark mb-4">Common Questions</h3>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium text-sarya-purple-dark mb-2">When will I be charged?</p>
+                <p className="text-gray-600">Your subscription starts immediately. You'll be billed at the beginning of each period based on your chosen plan.</p>
+              </div>
+              <div>
+                <p className="font-medium text-sarya-purple-dark mb-2">Can I switch plans?</p>
+                <p className="text-gray-600">Yes! You can upgrade, downgrade, or change your plan at any time. The new rate will be prorated from your next billing date.</p>
+              </div>
             </div>
           </div>
         </div>

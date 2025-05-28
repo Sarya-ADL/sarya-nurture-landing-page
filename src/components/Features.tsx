@@ -11,6 +11,7 @@ import {
   Shield,
   IndianRupee
 } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 const Features = () => {
   const adlCategories = [
@@ -90,10 +91,10 @@ const Features = () => {
             </Card>
           ))}
         </div>
-        <div className="flex justify-center mt-8">
-          <button className="btn-download bg-sarya-green hover:bg-sarya-purple-dark text-sarya-purple-dark font-bold text-lg px-8 py-4 rounded-full shadow-lg transition-all animate-float">
-            Join Beta Access
-          </button>
+        <div className="flex justify-center">
+          <Button className="btn-download bg-sarya-green hover:bg-sarya-purple-dark text-sarya-purple-dark font-bold text-lg px-8 py-4 rounded-full shadow-lg transition-all animate-float">
+            <a href="https://forms.gle/BcXzk5t1ZYTMXjSX7" target="_blank" rel="noopener noreferrer">Join Beta Access</a>
+          </Button>
         </div>
       </div>
     </section>

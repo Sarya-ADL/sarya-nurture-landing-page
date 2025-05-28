@@ -113,7 +113,7 @@ const Hero = () => {
               </Button>
             )}
             <Button className="btn-download bg-sarya-green hover:bg-sarya-purple-dark font-bold" style={{ minWidth: 180 }}>
-              Join our beta program
+              <a href="https://forms.gle/BcXzk5t1ZYTMXjSX7" target="_blank" rel="noopener noreferrer">Join our beta program</a>
             </Button>
           </div>
           <div className="mt-2">
