@@ -4,6 +4,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 252 28% 88%; /* #ece9f5 - lighter background */
+    --foreground: 255 15% 40%; /* #8a81ab - text color */
+    --card: 255 15% 98%;
+    --card-foreground: 255 15% 40%;
+    --popover: 255 15% 98%;
+    --popover-foreground: 255 15% 40%;
+    --primary: 255 29% 74%; /* #aca1d6 - primary color */
+    --primary-foreground: 255 15% 40%;
+    --secondary: 255 15% 93%;
+    --secondary-foreground: 255 15% 40%;
+    --muted: 255 15% 93%;
+    --muted-foreground: 255 15% 55%;
+    --accent: 255 29% 74%;
+    --accent-foreground: 255 15% 40%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 255 15% 98%;
+    --border: 255 15% 88%;
+    --input: 255 15% 88%;
+    --ring: 255 15% 40%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 245 14% 25%; /* #3c384b */
+    --foreground: 252 28% 88%; /* #ece9f5 */
+    --card: 245 14% 25%;
+    --card-foreground: 252 28% 88%;
+    --popover: 245 14% 25%;
+    --popover-foreground: 252 28% 88%;
+    --primary: 255 29% 74%;
+    --primary-foreground: 245 14% 25%;
+    --secondary: 245 14% 20%;
+    --secondary-foreground: 252 28% 88%;
+    --muted: 245 14% 20%;
+    --muted-foreground: 252 28% 78%;
+    --accent: 245 14% 20%;
+    --accent-foreground: 252 28% 88%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 252 28% 88%;
+    --border: 245 14% 20%;
+    --input: 245 14% 20%;
+    --ring: 252 28% 88%;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-soft {
+    @apply bg-gradient-to-br from-[#aca1d6]/20 via-[#8a81ab]/10 to-[#ece9f5];
+  }
+  
+  .bg-gradient-soft-dark {
+    @apply dark:from-[#3c384b] dark:via-[#4a4559] dark:to-[#3c384b];
+  }
+
+  .bg-gradient-button {
+    @apply bg-gradient-to-r from-[#aca1d6] to-[#8a81ab] hover:from-[#b8aede] hover:to-[#9690b3];
+  }
+
+  .bg-gradient-card {
+    @apply bg-gradient-to-br from-white via-[#aca1d6]/5 to-[#8a81ab]/10;
+  }
+}
+
 /* Base Styles */
 html {
   scroll-behavior: smooth;
