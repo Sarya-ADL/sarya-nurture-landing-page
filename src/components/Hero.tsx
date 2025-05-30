@@ -44,7 +44,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-sarya-purple/40 to-sarya-peach/40 rounded-full animate-pulse"></div>
               <img 
                 src="/lovable-uploads/f9e05724-c3d3-444d-97f4-19eac5386a86.png" 
-                alt="Sarya Logo" 
+                alt="Autism ADHD ADL app for Indian children - Sarya" 
                 className="h-16 md:h-20 relative z-10 drop-shadow-lg"
               />
             </div>
@@ -53,8 +53,8 @@ const Hero = () => {
                 Sarya
               </h1>
               <div className="inline-block bg-sarya-purple/20 px-3 py-1 rounded-full text-sm text-sarya-purple-dark mt-2">
-                India's First ADL Skills App for Special Needs
-              </div>
+                 India’s Leading App for Autism, ADHD & Daily Living Skills              
+            </div>
             </div>
           </div>
           
