@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Mail, Menu, X, Download, ChevronRight } from 'lucide-react';
+import { Menu, X, Download, ChevronRight, Instagram } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
 
 const Navbar = () => {
@@ -88,25 +88,36 @@ const Navbar = () => {
         </nav>
         
         {/* Action Buttons */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <ThemeToggle />
           <a 
-            href="mailto:support@thesarya.com" 
-            className="hidden md:flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors"
+            href="https://www.instagram.com/thesarya.app" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hidden md:flex items-center gap-2 bg-gradient-to-br from-sarya-purple/90 to-sarya-peach/90 dark:from-sarya-purple/80 dark:to-sarya-peach/80 text-white px-3 py-1.5 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm"
           >
-            <Mail size={18} />
-            <span>Support</span>
+            <Instagram size={16} />
+            <span>Follow us</span>
           </a>
           <Button 
-            className="bg-gradient-button text-white shadow-lg shadow-[#aca1d6]/20 hover:shadow-[#8a81ab]/30 transition-all duration-300"
+            className="bg-sarya-green/90 hover:bg-sarya-purple hover:scale-105 text-white dark:bg-sarya-green/80 dark:hover:bg-sarya-purple font-bold px-3 py-1.5 h-auto text-sm rounded-full shadow-lg transition-all duration-300"
           >
-            <Download size={18} className="mr-2" />
-            Download App
+            <a href="https://forms.gle/BcXzk5t1ZYTMXjSX7" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              Join Beta Program
+            </a>
           </Button>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Menu */}
       <div className={`md:hidden fixed inset-0 bg-white/95 backdrop-blur-lg transition-all duration-300 ${
         isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
       }`}>
@@ -126,13 +137,6 @@ const Navbar = () => {
                 <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </button>
             ))}
-            <a 
-              href="mailto:support@thesarya.com" 
-              className="flex items-center gap-2 text-xl font-medium text-sarya-purple-dark hover:text-sarya-purple transition-colors"
-            >
-              <Mail size={20} />
-              <span>Contact Support</span>
-            </a>
           </nav>
         </div>
       </div>
