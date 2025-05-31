@@ -3,9 +3,18 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
-  // Device detection for mobile platform
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [platform, setPlatform] = useState<'ios' | 'android' | 'desktop'>('desktop');
   
+  const phoneImages = [
+    "/lovable-uploads/lang.png",
+    "/lovable-uploads/onboarding-1.png",
+    "/lovable-uploads/onboarding-2.png",
+    "/lovable-uploads/onboarding-3.png",
+    "/lovable-uploads/onboarding.png",
+    "/lovable-uploads/home rainy.png"
+  ];
+
   const taglines = [
     { text: "Essential life skills for every Indian child.", language: "" },
     { text: "हर भारतीय बच्चे के लिए जरूरी जीवन कौशल।", language: "" },
@@ -18,11 +27,19 @@ const Hero = () => {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const taglineInterval = setInterval(() => {
       setCurrentTaglineIndex((prevIndex) => (prevIndex + 1) % taglines.length);
     }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+
+    const imageInterval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % phoneImages.length);
+    }, 2000);
+
+    return () => {
+      clearInterval(taglineInterval);
+      clearInterval(imageInterval);
+    };
+  }, [taglines.length, phoneImages.length]);
 
   useEffect(() => {
     const ua = navigator.userAgent || navigator.vendor;
@@ -36,7 +53,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-sarya-purple/5 to-sarya-peach/10">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-sarya-purple/5 to-sarya-peach/10 dark:from-gray-950 dark:via-sarya-purple/10 dark:to-sarya-peach/5">
       <div className="container-custom grid md:grid-cols-2 gap-8 items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3 animate-fade-in">
@@ -49,12 +66,12 @@ const Hero = () => {
               />
             </div>
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sarya-purple-dark">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sarya-purple-dark dark:text-white">
                 Sarya
               </h1>
-              <div className="inline-block bg-sarya-purple/20 px-3 py-1 rounded-full text-sm text-sarya-purple-dark mt-2">
-                 India’s Leading App for Autism, ADHD & Daily Living Skills              
-            </div>
+              <div className="inline-block bg-sarya-purple/20 dark:bg-sarya-purple/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark dark:text-white">
+                 India's Leading App for Autism, ADHD & Daily Living Skills              
+              </div>
             </div>
           </div>
           
@@ -66,25 +83,25 @@ const Hero = () => {
                 transform: 'translateY(0)'
               }}
             >
-              <p className="text-xl md:text-2xl font-medium text-sarya-purple-dark">
+              <p className="text-xl md:text-2xl font-medium text-sarya-purple-dark dark:text-white">
                 {taglines[currentTaglineIndex].text}
               </p>
-              <span className="text-sm text-sarya-purple opacity-75">
+              <span className="text-sm text-sarya-purple dark:text-sarya-purple/80 opacity-75">
                 {taglines[currentTaglineIndex].language}
               </span>
             </div>
           </div>
           
           <div className="space-y-3 mt-4">
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 dark:text-gray-300">
               A specially designed app for Indian children with autism, ADHD, Down syndrome, and special needs to master 
               essential daily life skills through culturally relevant activities and step-by-step video guides.
             </p>
             <div className="flex flex-wrap gap-2 mt-4">
-              <span className="bg-sarya-purple/20 px-3 py-1 rounded-full text-sm text-sarya-purple-dark">Self-Care Skills</span>
-              <span className="bg-sarya-peach/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark">Home Skills</span>
-              <span className="bg-sarya-green/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark">School Readiness</span>
-              <span className="bg-sarya-blue/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark">Social Behavior</span>
+              <span className="bg-sarya-purple/20 dark:bg-sarya-purple/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark dark:text-white">Self-Care Skills</span>
+              <span className="bg-sarya-peach/30 dark:bg-sarya-peach/40 px-3 py-1 rounded-full text-sm text-sarya-purple-dark dark:text-white">Home Skills</span>
+              <span className="bg-sarya-green/30 dark:bg-sarya-green/40 px-3 py-1 rounded-full text-sm text-sarya-purple-dark dark:text-white">School Readiness</span>
+              <span className="bg-sarya-blue/30 dark:bg-sarya-blue/40 px-3 py-1 rounded-full text-sm text-sarya-purple-dark dark:text-white">Social Behavior</span>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
@@ -117,28 +134,35 @@ const Hero = () => {
             </Button>
           </div>
           <div className="mt-2">
-            <p className="text-sarya-purple-dark font-semibold">Starting at ₹899/month - Get 40% OFF with our yearly plan!</p>
-            <div className="mt-2 inline-block bg-sarya-purple/10 px-4 py-2 rounded-lg">
-              <span className="text-sm text-sarya-purple-dark">Join <b>500+</b> Indian families already using Sarya</span>
+            <p className="text-sarya-purple-dark dark:text-white font-semibold">Starting at ₹899/month - Get 40% OFF with our yearly plan!</p>
+            <div className="mt-2 inline-block bg-sarya-purple/10 dark:bg-sarya-purple/30 px-4 py-2 rounded-lg">
+              <span className="text-sm text-sarya-purple-dark dark:text-white">Join <b>500+</b> Indian families already using Sarya</span>
             </div>
           </div>
         </div>
         
         <div className="flex justify-center">
           <div className="relative w-full max-w-md animate-float">
-            <div className="relative mx-auto bg-black rounded-[3rem] overflow-hidden border-[14px] border-black w-[270px] h-[540px] shadow-2xl">
+            <div className="relative mx-auto bg-black rounded-[3rem] overflow-hidden border-[14px] border-black w-[270px] h-[540px] shadow-2xl dark:shadow-sarya-purple/20">
               <div className="absolute top-0 w-[40%] h-[30px] bg-black left-[30%] rounded-b-xl z-10"></div>
-              <img 
-                src="/lovable-uploads/cd839843-e0b2-45b2-bf9b-08aff88fc754.png" 
-                alt="Sarya App - Daily activities for children with special needs" 
-                className="w-full h-full object-cover rounded-[2rem]"
-              />
+              {phoneImages.map((img, index) => (
+                <img 
+                  key={img}
+                  src={img}
+                  alt="Sarya App - Daily activities for children with special needs" 
+                  className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+                    img.includes('lang.png') ? 'object-contain p-4' : 'object-cover'
+                  } rounded-[2rem] ${
+                    index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
             </div>
-            <div className="absolute -bottom-10 -right-8 bg-sarya-purple/20 rounded-full px-5 py-3 shadow-md">
-              <p className="text-sarya-purple-dark font-medium text-sm">Made for India</p>
+            <div className="absolute -bottom-10 -right-8 bg-sarya-purple/20 dark:bg-sarya-purple/30 rounded-full px-5 py-3 shadow-md">
+              <p className="text-sarya-purple-dark dark:text-white font-medium text-sm">Made for India</p>
             </div>
-            <div className="absolute -top-6 -left-4 bg-sarya-peach/30 rounded-full px-5 py-3 shadow-md animate-float-delay-2">
-              <p className="text-sarya-purple-dark font-medium text-sm">Regional languages</p>
+            <div className="absolute -top-6 -left-4 bg-sarya-peach/30 dark:bg-sarya-peach/40 rounded-full px-5 py-3 shadow-md animate-float-delay-2">
+              <p className="text-sarya-purple-dark dark:text-white font-medium text-sm">Regional languages</p>
             </div>
           </div>
         </div>
