@@ -164,7 +164,7 @@ const Hero = () => {
                   <img 
                     key={img}
                     src={img}
-                    alt={`Sarya App Feature ${index + 1}`}
+                    alt={`ADL app India - teaching life skills to children with autism and ADHD ${index + 1}`}
                     className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
                       img.includes('lang.png') ? 'object-contain p-4' : 'object-cover'
                     } rounded-[2rem] ${
