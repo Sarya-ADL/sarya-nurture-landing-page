@@ -60,7 +60,7 @@ const Navbar = () => {
           <div className="flex flex-col">
             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8a81ab] to-[#aca1d6] dark:from-[#ece9f5] dark:to-[#aca1d6]">Sarya</span>
             <span className="hidden sm:inline-block text-xs bg-gradient-to-r from-[#aca1d6]/20 to-[#8a81ab]/20 dark:from-[#aca1d6]/10 dark:to-[#8a81ab]/10 px-2 py-0.5 rounded-full text-foreground/80">
-              Made in India with ❤️
+              Essential life skills — simple, fun, and truly Indian! ❤️
             </span>
           </div>
         </div>
