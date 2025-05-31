@@ -70,7 +70,7 @@ const Hero = () => {
                 Sarya
               </h1>
               <div className="inline-block bg-sarya-purple/20 dark:bg-sarya-purple/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark dark:text-white">
-                 India's Leading App for Autism, ADHD & Daily Living Skills              
+                 Essential life skills — simple, fun, and truly Indian!             
               </div>
             </div>
           </div>
