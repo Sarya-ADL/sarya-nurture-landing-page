@@ -24,7 +24,8 @@ const Hero = () => {
     "/lovable-uploads/onboarding.png",
     "/lovable-uploads/onboarding-1.png",
     "/lovable-uploads/onboarding-2.png",
-    "/lovable-uploads/onboarding-3.png"
+    "/lovable-uploads/onboarding-3.png",
+    "/lovable-uploads/lang.png",
   ];
 
   useEffect(() => {
