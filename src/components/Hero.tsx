@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [platform, setPlatform] = useState<'ios' | 'android' | 'desktop'>('desktop');
-  
-  const phoneImages = [
-    "/lovable-uploads/lang.png",
-    "/lovable-uploads/onboarding-1.png",
-    "/lovable-uploads/onboarding-2.png",
-    "/lovable-uploads/onboarding-3.png",
-    "/lovable-uploads/onboarding.png",
-    "/lovable-uploads/home rainy.png"
-  ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const taglines = [
     { text: "Essential life skills for every Indian child.", language: "" },
@@ -26,20 +18,30 @@ const Hero = () => {
     { text: "എല്ലാ ഇന്ത്യൻ കുട്ടികൾക്കും ആവശ്യമായ ജീവിത വൈദഗ്ധ്യം.", language: "" },
   ];
 
+  const showcaseImages = [
+    "/lovable-uploads/home rainy.png",
+    "/lovable-uploads/home rainy-1.png",
+    "/lovable-uploads/onboarding.png",
+    "/lovable-uploads/onboarding-1.png",
+    "/lovable-uploads/onboarding-2.png",
+    "/lovable-uploads/onboarding-3.png"
+  ];
+
   useEffect(() => {
     const taglineInterval = setInterval(() => {
       setCurrentTaglineIndex((prevIndex) => (prevIndex + 1) % taglines.length);
     }, 3000);
 
+    return () => clearInterval(taglineInterval);
+  }, [taglines.length]);
+
+  useEffect(() => {
     const imageInterval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % phoneImages.length);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % showcaseImages.length);
     }, 2000);
 
-    return () => {
-      clearInterval(taglineInterval);
-      clearInterval(imageInterval);
-    };
-  }, [taglines.length, phoneImages.length]);
+    return () => clearInterval(imageInterval);
+  }, [showcaseImages.length]);
 
   useEffect(() => {
     const ua = navigator.userAgent || navigator.vendor;
@@ -60,9 +62,9 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-sarya-purple/40 to-sarya-peach/40 rounded-full animate-pulse"></div>
               <img 
-                src="/lovable-uploads/f9e05724-c3d3-444d-97f4-19eac5386a86.png" 
+                src="/lovable-uploads/home rainy.png"
                 alt="Autism ADHD ADL app for Indian children - Sarya" 
-                className="h-16 md:h-20 relative z-10 drop-shadow-lg"
+                className="h-16 md:h-20 relative z-10 drop-shadow-lg transition-opacity duration-500"
               />
             </div>
             <div>
@@ -70,8 +72,8 @@ const Hero = () => {
                 Sarya
               </h1>
               <div className="inline-block bg-sarya-purple/20 dark:bg-sarya-purple/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark dark:text-white">
-                 Essential life skills — simple, fun, and truly Indian!             
-              </div>
+                 India's App for Autism, ADHD & Daily Living Skills              
+            </div>
             </div>
           </div>
           
@@ -145,24 +147,22 @@ const Hero = () => {
           <div className="relative w-full max-w-md animate-float">
             <div className="relative mx-auto bg-black rounded-[3rem] overflow-hidden border-[14px] border-black w-[270px] h-[540px] shadow-2xl dark:shadow-sarya-purple/20">
               <div className="absolute top-0 w-[40%] h-[30px] bg-black left-[30%] rounded-b-xl z-10"></div>
-              {phoneImages.map((img, index) => (
+              {showcaseImages.map((img, index) => (
                 <img 
                   key={img}
                   src={img}
-                  alt="Sarya App - Daily activities for children with special needs" 
-                  className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
-                    img.includes('lang.png') ? 'object-contain p-4' : 'object-cover'
-                  } rounded-[2rem] ${
+                  alt={`Sarya App Feature ${index + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover rounded-[2rem] transition-opacity duration-500 ${
                     index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
               ))}
             </div>
             <div className="absolute -bottom-10 -right-8 bg-sarya-purple/20 dark:bg-sarya-purple/30 rounded-full px-5 py-3 shadow-md">
-              <p className="text-sarya-purple-dark dark:text-white font-medium text-sm">Made for India</p>
+              <p className="text-sarya-purple-dark dark:text-white font-medium text-sm">Video Guides</p>
             </div>
             <div className="absolute -top-6 -left-4 bg-sarya-peach/30 dark:bg-sarya-peach/40 rounded-full px-5 py-3 shadow-md animate-float-delay-2">
-              <p className="text-sarya-purple-dark dark:text-white font-medium text-sm">Regional languages</p>
+              <p className="text-sarya-purple-dark dark:text-white font-medium text-sm">Daily Activities</p>
             </div>
           </div>
         </div>
