@@ -8,7 +8,7 @@ const PricingCard = ({ plan, price, period, isRecommended = false, savings = "" 
       <div className="bg-white rounded-3xl p-8 h-full relative flex flex-col">
         {isRecommended && (
           <div className="absolute -right-10 top-6 bg-sarya-purple-dark text-white px-12 py-1 rotate-45 text-sm font-medium shadow-lg">
-            Recommended
+            ⭐️ Recommended ⭐️
           </div>
         )}
         <div className="mb-6 flex flex-col items-center">
@@ -79,20 +79,20 @@ const Pricing = () => {
             plan="Quarterly"
             price="2,699"
             period="quarter"
-            savings="Save ₹998 vs monthly"
+            savings="Get 15 days free"
           />
           <PricingCard 
             plan="Half Yearly"
-            price="4,999"
+            price="4,500"
             period="6 months"
-            savings="Save ₹2,395 vs monthly"
+            savings="Save ₹894 and get 1 month free"
           />
           <PricingCard 
             plan="Yearly"
-            price="9,999"
+            price="9,000"
             period="year"
             isRecommended={true}
-            savings="Save ₹4,789 vs monthly"
+            savings="Save ₹1788 and get 2 month free"
           />
         </div>
 
