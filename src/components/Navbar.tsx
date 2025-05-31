@@ -53,7 +53,7 @@ const Navbar = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-[#8a81ab]/40 to-[#6a5f96]/40 rounded-full transform group-hover:scale-110 transition-all duration-300"></div>
             <img 
               src="/lovable-uploads/6467cd1e-eb13-448e-b6c1-ca2fea7f0888.png" 
-              alt="Sarya Logo" 
+              alt="ADL app India - teaching life skills to children with autism and ADHD" 
               className="w-12 h-12 object-contain relative z-10 drop-shadow-md"
             />
           </div>
