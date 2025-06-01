@@ -128,7 +128,7 @@ export default function Navbar({}: NavbarProps) {
           
           {/* Instagram Button - Desktop */}
           <a 
-            href="https://www.instagram.com/the_sarya_com" 
+            href="https://www.instagram.com/the_sarya_com/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hidden dark:hidden md:flex items-center gap-2 bg-gradient-to-br from-sarya-purple/90 to-sarya-peach/90 text-white px-3 py-1.5 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm"
@@ -139,7 +139,7 @@ export default function Navbar({}: NavbarProps) {
 
           {/* Instagram Icon - Mobile */}
           <a 
-            href="https://www.instagram.com/the_sarya_com"
+            href="https://www.instagram.com/the_sarya_com/"
             target="_blank" 
             rel="noopener noreferrer"
             className="md:hidden flex items-center bg-gradient-to-br from-sarya-purple/90 to-sarya-peach/90 text-white p-1.5 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
