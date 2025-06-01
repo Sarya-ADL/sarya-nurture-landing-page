@@ -80,7 +80,7 @@ const Hero = () => {
                   Sarya
                 </h1>
                 <div className="inline-block bg-sarya-purple/20 dark:bg-sarya-purple/30 px-3 py-1 rounded-full text-sm text-sarya-purple-dark dark:text-white backdrop-blur-sm">
-                  India's Leading App for Autism, ADHD & Daily Living Skills              
+                  India's Leading App for Autism, ADHD & Special Needs              
                 </div>
               </div>
             </div>
