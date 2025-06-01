@@ -52,7 +52,7 @@ const Navbar = () => {
           <div className="relative group cursor-pointer" onClick={() => scrollToSection('hero')}>
             <div className="absolute inset-0 bg-gradient-to-br from-[#8a81ab]/40 to-[#6a5f96]/40 rounded-full transform group-hover:scale-110 transition-all duration-300"></div>
             <img 
-              src="/lovable-uploads/6467cd1e-eb13-448e-b6c1-ca2fea7f0888.png" 
+              src="/lovable-uploads/6467cd1e-eb13-448e-b6c1-ca2fea7f0888.png"
               alt="ADL app India - teaching life skills to children with autism and ADHD" 
               className="w-12 h-12 object-contain relative z-10 drop-shadow-md"
             />
@@ -93,7 +93,7 @@ const Navbar = () => {
           
           {/* Instagram Button - Desktop */}
           <a 
-            href="https://www.instagram.com/hellosarya" 
+            href="https://www.instagram.com/the_sarya_com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hidden dark:hidden md:flex items-center gap-2 bg-gradient-to-br from-[#6a5f96]/90 to-[#8a81ab]/90 text-white px-3 py-1.5 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm"
@@ -104,7 +104,7 @@ const Navbar = () => {
 
           {/* Instagram Icon - Mobile */}
           <a 
-            href="https://www.instagram.com/hellosarya" 
+            href="https://www.instagram.com/the_sarya_com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="md:hidden flex items-center bg-gradient-to-br from-[#6a5f96]/90 to-[#8a81ab]/90 text-white p-1.5 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"

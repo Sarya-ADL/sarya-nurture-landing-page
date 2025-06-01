@@ -80,10 +80,10 @@ const Legal = () => {
                 <p className="text-gray-700">
                   To request a refund or discuss any concerns, please email us at{' '}
                   <a 
-                    href="mailto:support@tehsarya.com" 
+                    href="mailto:support@thesarya.com" 
                     className="text-sarya-purple hover:text-sarya-purple-dark underline"
                   >
-                    support@tehsarya.com
+                    support@thesarya.com
                   </a>
                 </p>
               </div>
