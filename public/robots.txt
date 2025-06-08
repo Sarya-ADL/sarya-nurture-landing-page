@@ -1,15 +1,61 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
-Sitemap:https://thesarya.com/sitemap.xml
+Disallow: /*=
+Disallow: /*?
+
+User-agent: Googlebot
+Allow: /
+Disallow: /*=
+Disallow: /*?
+
+User-agent: Googlebot-Mobile
+Allow: /
+Disallow: /*=
+Disallow: /*?
+
+User-Agent: bingbot
+Allow: /
+Disallow: /*=
+Disallow: /*?
+
+User-agent: ChatGPT
+Crawl-delay: 10
+Allow: /
+
+User-agent: GPTBot
+Crawl-delay: 10
+Allow: /
+
+User-agent: ChatGPT-User
+Crawl-delay: 10
+Allow: /
+
+User-agent: OAI-Search
+Crawl-delay: 10
+Allow: /
+
+User-agent: Bard
+Crawl-delay: 10
+Allow: /
+
+User-agent: Gemini
+Crawl-delay: 10
+Allow: /
+
+User-agent: OAI-SearchBot
+Crawl-delay: 10
+Allow: /
+
+User-agent: OpenAI
+Crawl-delay: 10
+Allow: /
+
+User-agent: GenerativeAI
+Crawl-delay: 10
+Allow: /
+
+User-agent: PredictiveAI
+Crawl-delay: 10
+Allow: /
+
+Sitemap: https://thesarya.com/sitemap.xml

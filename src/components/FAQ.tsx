@@ -14,7 +14,7 @@ const FAQ = () => {
     },
     {
       question: "What skills does Sarya teach?",
-      answer: "Sarya covers self-care, home skills, school readiness, social behavior, safety, hygiene, money, and travel. All designed for Indian families and children with special needs."
+      answer: "Sarya covers self-care, home skills, school readiness, social behavior, safety, hygiene, puberty , money, and travel. All designed for Indian families and children with special needs."
     },
     {
       question: "How does Sarya make learning fun?",

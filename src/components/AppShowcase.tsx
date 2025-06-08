@@ -18,7 +18,7 @@ const AppShowcase = () => {
       icon: "🎲",
       title: "3D Product Overview",
       description: "Explore Sarya's world—see activities, rewards, and progress in a playful, interactive way!",
-      image: "/lovable-uploads/6467cd1e-eb13-448e-b6c1-ca2fea7f0888.png",
+      image: "/lovable-uploads/image-3d.png",
       bgClass: "bg-gradient-to-br from-sarya-purple/10 to-sarya-green/20",
       borderColor: "border-sarya-purple/30"
     },
