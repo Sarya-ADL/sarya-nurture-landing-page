@@ -10,7 +10,7 @@ const AppShowcase = () => {
       icon: "🪥",
       title: "Personalized Routines",
       description: "Fun daily routines for brushing, bathing, eating, and more—made visual and easy for every child!",
-      image: "/lovable-uploads/image.png",
+      image: "/assets/images/image.png",
       bgClass: "bg-gradient-to-br from-sarya-peach/30 to-sarya-purple/10",
       borderColor: "border-sarya-peach/40"
     },
@@ -18,7 +18,7 @@ const AppShowcase = () => {
       icon: "🎲",
       title: "3D Product Overview",
       description: "Explore Sarya's world—see activities, rewards, and progress in a playful, interactive way!",
-      image: "/lovable-uploads/image-3d.png",
+      image: "/assets/images/image-3d.png",
       bgClass: "bg-gradient-to-br from-sarya-purple/10 to-sarya-green/20",
       borderColor: "border-sarya-purple/30"
     },
@@ -26,7 +26,7 @@ const AppShowcase = () => {
       icon: "🧑‍🎓",
       title: "Adult-Specific Activities",
       description: "For older kids & adults: learn skills for independence, social fun, and real-life success!",
-      image: "/lovable-uploads/image7.png",
+      image: "/assets/images/image7.png",
       bgClass: "bg-gradient-to-br from-sarya-green/20 to-sarya-peach/20",
       borderColor: "border-sarya-green/40"
     }
