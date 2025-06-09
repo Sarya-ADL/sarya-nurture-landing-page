@@ -1,0 +1,21 @@
+{
+  "name": "Sarya - ADL Skills Training App",
+  "short_name": "Sarya",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ACA1D6",
+  "theme_color": "#ACA1D6",
+  "description": "India's leading ADL (Activities of Daily Living) app for children with Autism, ADHD, and special needs.",
+  "icons": [
+    {
+      "src": "/assets/images/apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 
