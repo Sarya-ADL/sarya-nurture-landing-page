@@ -20,7 +20,7 @@ const PricingCard = ({ plan, price, period, isRecommended = false, savings = "" 
           </span>
           <div className="flex items-baseline gap-1 mb-2">
             <span className="text-4xl font-bold text-sarya-purple-dark dark:text-white transition-colors duration-300">₹{price}</span>
-            <span className="text-gray-600 dark:text-gray-300 transition-colors duration-300">/{period}</span>
+            <span className="text-gray-600 dark:text-gray-300 transition-colors duration-300"></span>
           </div>
           {savings && (
             <p className="text-sarya-purple-dark dark:text-sarya-peach font-medium mb-2 transition-colors duration-300">{savings}</p>
@@ -76,24 +76,24 @@ const Pricing = () => {
           <PricingCard 
             plan="Monthly"
             price="899"
-            period="month"
+            period=""
           />
           <PricingCard 
             plan="Quarterly"
             price="2,699"
-            period="quarter"
+            period=""
             savings="Get 15 days free"
           />
           <PricingCard 
             plan="Half Yearly"
             price="4,500"
-            period="6 months"
+            period=""
             savings="Save ₹894 and get 1 month free"
           />
           <PricingCard 
             plan="Yearly"
             price="9,000"
-            period="year"
+            period=""
             isRecommended={true}
             savings="Save ₹1788 and get 2 month free"
           />
