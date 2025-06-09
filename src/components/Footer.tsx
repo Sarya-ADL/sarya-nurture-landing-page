@@ -93,6 +93,9 @@ const Footer = () => {
             <p className="text-sm text-white/50">
               Made with ❤️ in India
             </p>
+            <p className="text-sm text-white/40">
+              Sarya is developed and operated by Saras Sensory Store Pvt Ltd, India.
+            </p>
           </div>
         </div>
       </div>
