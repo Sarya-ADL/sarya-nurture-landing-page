@@ -20,6 +20,15 @@ const Legal = () => {
     <div className="min-h-screen pt-20 pb-20 bg-gradient-to-br from-white via-sarya-purple/5 to-sarya-peach/5">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto space-y-16">
+          {/* Company Information */}
+          <section>
+            <div className="prose prose-gray max-w-none">
+              <p className="text-gray-700 mb-4">
+                Sarya is developed and operated by Saras Sensory Store Pvt Ltd, India.
+              </p>
+            </div>
+          </section>
+
           {/* Privacy Policy */}
           <section id="privacy">
             <h1 className="text-3xl font-bold text-sarya-purple-dark mb-6">Privacy Policy</h1>
